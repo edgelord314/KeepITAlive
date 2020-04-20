@@ -13,7 +13,7 @@ public class ReactionMinigame extends Minigame {
 
     private ProgressBar countdown = new ProgressBar(Game.getHost().getHorizontalCentrePosition(300), 25, 300, 25);
 
-    private static float countdownPerTick = .05f;
+    private static float countdownPerTick = .015f;
 
     public static int count = 0;
 
@@ -22,8 +22,9 @@ public class ReactionMinigame extends Minigame {
 
         count++;
 
-        if (count >= 3) {
-            countdownPerTick += .015f;
+        if (count % 3 == 0) {
+            countdownPerTick += .010f;
+            System.out.println("the game just got a bit more difficult! (reference: " + countdownPerTick + ")");
         }
 
         countdown.setBackgroundColor(ColorUtil.BLACK);
@@ -57,40 +58,40 @@ public class ReactionMinigame extends Minigame {
         switch (e.getKeyChar()) {
             case '1':
                 if (SentenceEndings.isGood(getEndings().get(0))) {
-                    // TODO: SFX
                     MainScene.changeMinigame(new ReactionMinigame());
+                    Main.playSuccess();
                 } else {
                     SceneManager.setCurrentScene(new LostScene("IT " + getEndings().get(0)));
                 }
                 break;
             case '2':
                 if (SentenceEndings.isGood(getEndings().get(1))) {
-                    // TODO: SFX
                     MainScene.changeMinigame(new ReactionMinigame());
+                    Main.playSuccess();
                 } else {
                     SceneManager.setCurrentScene(new LostScene("IT " + getEndings().get(1)));
                 }
                 break;
             case '3':
                 if (SentenceEndings.isGood(getEndings().get(2))) {
-                    // TODO: SFX
                     MainScene.changeMinigame(new ReactionMinigame());
+                    Main.playSuccess();
                 } else {
                     SceneManager.setCurrentScene(new LostScene("IT " + getEndings().get(2)));
                 }
                 break;
             case '4':
                 if (SentenceEndings.isGood(getEndings().get(3))) {
-                    // TODO: SFX
                     MainScene.changeMinigame(new ReactionMinigame());
+                    Main.playSuccess();
                 } else {
                     SceneManager.setCurrentScene(new LostScene("IT " + getEndings().get(3)));
                 }
                 break;
             case '5':
                 if (SentenceEndings.isGood(getEndings().get(4))) {
-                    // TODO: SFX
                     MainScene.changeMinigame(new ReactionMinigame());
+                    Main.playSuccess();
                 } else {
                     SceneManager.setCurrentScene(new LostScene("IT " + getEndings().get(4)));
                 }

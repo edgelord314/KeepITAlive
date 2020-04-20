@@ -28,6 +28,7 @@ public class LostScene extends Scene {
 
         Main.audioPlayer.stop("maintheme");
         Main.audioPlayer.loop("raindrop");
+        Main.audioPlayer.play("lost");
 
         Game.getHost().setBackgroundColor(ColorUtil.FIREBRICK_RED);
 
@@ -49,6 +50,10 @@ public class LostScene extends Scene {
                 saltyGraphics.setFont(saltyGraphics.getFont().deriveFont(50f));
 
                 saltyGraphics.drawText(sentence, Game.getGameWidth() / 2f, Game.getGameHeight() / 2f, SaltyGraphics.TextAnchor.CENTRE);
+
+                saltyGraphics.setFont(saltyGraphics.getFont().deriveFont(20f));
+                saltyGraphics.drawText("Highscore: " + Main.highScore, 10, 5, SaltyGraphics.TextAnchor.TOP_LEFT_CORNER);
+                saltyGraphics.drawText("Score: " + ReactionMinigame.count, Game.getGameWidth() - 10, 5, SaltyGraphics.TextAnchor.TOP_RIGHT_CORNER);
             }
         });
     }

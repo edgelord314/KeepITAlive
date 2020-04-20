@@ -49,6 +49,10 @@ public class MenuScene extends Scene {
                 saltyGraphics.drawText("Keep", textOffset, 50, SaltyGraphics.TextAnchor.TOP_LEFT_CORNER);
                 saltyGraphics.drawText("Alive", Game.getGameWidth() - textOffset, 50, SaltyGraphics.TextAnchor.TOP_RIGHT_CORNER);
 
+                saltyGraphics.setFont(saltyGraphics.getFont().deriveFont(20f));
+                saltyGraphics.drawText("Highscore: " + Main.highScore, 10, 5, SaltyGraphics.TextAnchor.TOP_LEFT_CORNER);
+                saltyGraphics.drawText("Score: -", Game.getGameWidth() - 10, 5, SaltyGraphics.TextAnchor.TOP_RIGHT_CORNER);
+
                 saltyGraphics.setFont(saltyGraphics.getFont().deriveFont(15f));
                 saltyGraphics.drawText("A reaction game made by Malte Dostal (edgelord314) in occasion of the Ludum Dare Gamejam 46.", 80, Game.getGameHeight() - 15, SaltyGraphics.TextAnchor.BOTTOM_LEFT_CORNER);
             }

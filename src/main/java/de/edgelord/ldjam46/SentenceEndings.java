@@ -18,6 +18,10 @@ public class SentenceEndings {
         add("it is cool.");
         add("is bad.");
         add("is gone.");
+        add("is born.");
+        add("is happening!");
+        add("is alright.");
+        add("smiles.");
     }};
 
     private static List<String> BAD_ENDINGS = new ArrayList<>() {{
@@ -31,6 +35,15 @@ public class SentenceEndings {
         add("falls down a cliff.");
         add("has faded away.");
         //TODO add more
+        add("eats a funny mushroom.");
+        add("didn't wash ITs hands.");
+        add("plays russian roulette.");
+        add("is a Yedi during Order 66.");
+        add("explodes.");
+        add("meets a wild lion.");
+        add("swims with hungry sharks.");
+        add("sees a T-Rex.");
+        add("hears Astronomia.");
     }};
 
     public static boolean isGood(String s) {

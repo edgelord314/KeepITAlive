@@ -1,5 +1,7 @@
 package de.edgelord.ldjam46;
 
+import de.edgelord.saltyengine.core.Game;
+import de.edgelord.saltyengine.core.graphics.SaltyGraphics;
 import de.edgelord.saltyengine.input.Input;
 import de.edgelord.saltyengine.input.KeyboardInputHandler;
 import de.edgelord.saltyengine.scene.Scene;
@@ -32,10 +34,23 @@ public class MainScene extends Scene {
         super.onFixedTick();
     }
 
+    @Override
+    public void draw(SaltyGraphics saltyGraphics) {
+        super.draw(saltyGraphics);
+
+        saltyGraphics.setFont(saltyGraphics.getFont().deriveFont(20f));
+        saltyGraphics.drawText("Highscore: " + Main.highScore, 10, 5, SaltyGraphics.TextAnchor.TOP_LEFT_CORNER);
+        saltyGraphics.drawText("Score: " + ReactionMinigame.count, Game.getGameWidth() - 10, 5, SaltyGraphics.TextAnchor.TOP_RIGHT_CORNER);
+    }
+
     public static void changeMinigame(Minigame minigame) {
         currentInstance.removeDrawingRoutine(currentInstance.minigame);
         currentInstance.addDrawingRoutine(minigame);
         currentInstance.minigame = minigame;
+
+        if (ReactionMinigame.count > Main.highScore) {
+            Main.highScore = ReactionMinigame.count;
+        }
     }
 
     static {
