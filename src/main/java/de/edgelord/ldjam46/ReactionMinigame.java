@@ -13,7 +13,7 @@ public class ReactionMinigame extends Minigame {
 
     private ProgressBar countdown = new ProgressBar(Game.getHost().getHorizontalCentrePosition(300), 25, 300, 25);
 
-    private static float countdownPerTick = .25f;
+    private static float countdownPerTick = .10f;
 
     public static int count = 0;
 
@@ -23,7 +23,7 @@ public class ReactionMinigame extends Minigame {
         count++;
 
         if (count >= 2) {
-            countdownPerTick += .125f;
+            countdownPerTick += .025f;
         }
 
         countdown.setBackgroundColor(ColorUtil.BLACK);
@@ -33,7 +33,7 @@ public class ReactionMinigame extends Minigame {
     }
 
     public static void resetDifficulty() {
-        countdownPerTick = .25f;
+        countdownPerTick = .15f;
         count = 0;
     }
 

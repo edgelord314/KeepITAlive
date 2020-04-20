@@ -21,6 +21,9 @@ public class MenuScene extends Scene {
 
     public MenuScene() {
 
+        Main.audioPlayer.loop("maintheme");
+        Main.audioPlayer.stop("raindrop");
+
         Game.getHost().setBackgroundColor(ColorUtil.ACTIVE_GREEN);
 
         KeyframeAnimation textOffsetAnimation = new LinearKeyframeAnimation();

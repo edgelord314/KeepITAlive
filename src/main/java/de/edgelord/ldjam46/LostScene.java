@@ -26,6 +26,9 @@ public class LostScene extends Scene {
 
     public LostScene(String sentence) {
 
+        Main.audioPlayer.stop("maintheme");
+        Main.audioPlayer.loop("raindrop");
+
         Game.getHost().setBackgroundColor(ColorUtil.FIREBRICK_RED);
 
         tryAgain.setBackgroundColor(ColorUtil.withAlpha(ColorUtil.ORANGE, 0));

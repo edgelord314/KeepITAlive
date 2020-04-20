@@ -15,6 +15,9 @@ public class MainScene extends Scene {
 
     public MainScene() {
 
+        Main.audioPlayer.loop("maintheme");
+        Main.audioPlayer.stop("raindrop");
+
         currentInstance = this;
 
         ReactionMinigame.resetDifficulty();
