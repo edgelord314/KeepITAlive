@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class SentenceEndings {
-    private static List<String> GOOD_ENDINGS = new ArrayList<>() {{
+    private static List<String> GOOD_ENDINGS = new ArrayList<String>() {{
         add("rains.");
         add("is fine.");
         add("sucks.");
@@ -24,7 +24,7 @@ public class SentenceEndings {
         add("smiles.");
     }};
 
-    private static List<String> BAD_ENDINGS = new ArrayList<>() {{
+    private static List<String> BAD_ENDINGS = new ArrayList<String>() {{
         add("blows up.");
         add("dies.");
         add("chokes.");

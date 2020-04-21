@@ -32,7 +32,7 @@ public class Main extends Game {
 
         audioPlayer.loadNewAudio("success", "Success.wav");
         audioPlayer.setClipVolume("success", .6f);
-        audioPlayer.loadNewAudio("lost", "lost.wav");
+        audioPlayer.loadNewAudio("lost", "Lost.wav");
         audioPlayer.loadNewAudio("yes", "Yes.wav");
         audioPlayer.loadNewAudio("nice", "Nice.wav");
 
